@@ -1,3 +1,5 @@
+// Change the color in create_cube_geometry
+
 use cgmath::*;
 use wgpu::*;
 use wgpu::util::{DeviceExt, BufferInitDescriptor};
@@ -42,7 +44,7 @@ impl CubeRenderer {
         let l_height = size.y / 2.0;
         let l_width = size.z / 2.0;
         
-        let color = [1.0, 1.0, 1.0, 1.0];
+        let color: [f32; 4] = [0.3, 1.0, 0.4, 1.0];
         
         let vertices = vec![
             // Front face
